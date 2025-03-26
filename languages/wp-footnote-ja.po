@@ -1,0 +1,192 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Footnote 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-footnote\n"
+"POT-Creation-Date: 2025-02-10 10:13+0900\n"
+"PO-Revision-Date: 2025-02-10 10:13+0900\n"
+"Last-Translator: Seiken TAKAMATSU\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: wp-footnote\n"
+
+msgid "A simple plugin to add footnotes to your WordPress posts. Use shortcodes to add footnotes that are automatically numbered and displayed at the end of the article. Includes hover preview and click navigation features."
+msgstr "WordPressの投稿に脚注を簡単に追加できるプラグインです。ショートコードを使用して脚注を追加し、自動的に番号付けされた脚注を記事の末尾に表示します。ホバーで脚注内容の確認や、クリックでの移動にも対応しています。"
+
+msgid "WP Footnote Settings"
+msgstr "WP Footnote 設定"
+
+msgid "WP Footnote"
+msgstr "WP Footnote"
+
+msgid "Usage"
+msgstr "使い方"
+
+msgid "1. Adding Footnotes"
+msgstr "1. 脚注の追加"
+
+msgid "Use shortcode in the post editor as follows:"
+msgstr "投稿エディタで以下のようにショートコードを使用します："
+
+msgid "2. Displaying Footnotes"
+msgstr "2. 脚注の表示"
+
+msgid "Footnotes are automatically numbered and displayed in the article."
+msgstr "脚注は自動的に番号付けされ、記事内の該当箇所に表示されます。"
+
+msgid "Hover over footnote numbers to see the content in a popup."
+msgstr "脚注番号にマウスを重ねると、脚注の内容がポップアップ表示されます。"
+
+msgid "Click on footnote numbers to scroll to the footnotes list at the end of the article."
+msgstr "脚注番号をクリックすると、記事末尾の脚注一覧の該当箇所にスクロールします。"
+
+msgid "Click the return button in the footnotes list to go back to the original position."
+msgstr "脚注一覧の戻るボタンをクリックすると、元の位置に戻ります。"
+
+msgid "3. Customization"
+msgstr "3. カスタマイズ"
+
+msgid "Choose your preferred footnote and popup styles from the settings below."
+msgstr "下記の設定から、お好みの脚注スタイルとポップアップスタイルを選択できます。"
+
+msgid "Apply custom styles using Custom CSS."
+msgstr "カスタムCSSを使用して、独自のスタイルを適用することもできます。"
+
+msgid "Toggle the display of the footnotes list."
+msgstr "脚注一覧の表示/非表示を切り替えることができます。"
+
+msgid "Customize the return button text."
+msgstr "脚注一覧の戻るボタンの文字列を変更できます。"
+
+msgid "Footnote Style"
+msgstr "脚注スタイル"
+
+msgid "Default (Simple)"
+msgstr "デフォルト（シンプル）"
+
+msgid "Rounded Gray"
+msgstr "角丸グレー"
+
+msgid "Black Square"
+msgstr "ブラックスクエア"
+
+msgid "Minimal Thin"
+msgstr "ミニマル細字"
+
+msgid "Black Border Gray Bold"
+msgstr "黒枠グレー太字"
+
+msgid "Pink White"
+msgstr "ピンク白抜き"
+
+msgid "Light Blue"
+msgstr "水色"
+
+msgid "Navy"
+msgstr "紺"
+
+msgid "Yellow"
+msgstr "イエロー"
+
+msgid "Simple Purple"
+msgstr "シンプルパープル"
+
+msgid "Flat (Matte)"
+msgstr "フラット（マット）"
+
+msgid "Pink Gradient"
+msgstr "ピンクグラデーション"
+
+msgid "Blue Line (Underline)"
+msgstr "ブルーライン（下線）"
+
+msgid "Green Button"
+msgstr "緑ボタン"
+
+msgid "Neon (Glow)"
+msgstr "ネオン（光彩）"
+
+msgid "Popup Style"
+msgstr "ポップアップスタイル"
+
+msgid "Simple (Dark)"
+msgstr "シンプル（ダーク）"
+
+msgid "Light (Bright)"
+msgstr "ライト（明るい）"
+
+msgid "Dark (Deep)"
+msgstr "ダーク（濃色）"
+
+msgid "Glass (Translucent)"
+msgstr "グラス（半透明）"
+
+msgid "Colorful (Gradient)"
+msgstr "カラフル（グラデーション）"
+
+msgid "Modern (Side Line)"
+msgstr "モダン（サイドライン）"
+
+msgid "Minimal (Simple)"
+msgstr "ミニマル（シンプル）"
+
+msgid "Elegant (Luxury)"
+msgstr "エレガント（高級感）"
+
+msgid "Soft (Gentle)"
+msgstr "ソフト（優しい）"
+
+msgid "Sharp (Cool)"
+msgstr "シャープ（かっこいい）"
+
+msgid "3D (Dimensional)"
+msgstr "3D（立体的）"
+
+msgid "Neon (Glowing)"
+msgstr "ネオン（光る）"
+
+msgid "Gradient Border"
+msgstr "グラデーションボーダー"
+
+msgid "Frost (Frosted Glass)"
+msgstr "フロスト（すりガラス）"
+
+msgid "Dynamic (Animated)"
+msgstr "ダイナミック（動く）"
+
+msgid "Return Button Text"
+msgstr "戻るボタンの文字列"
+
+msgid "Set the text for the return button in the footnotes list. Default: ↩"
+msgstr "脚注一覧の戻るボタンに表示する文字列を設定します。デフォルト: ↩"
+
+msgid "Custom CSS"
+msgstr "カスタムCSS"
+
+msgid "Enter custom CSS to customize the footnote styles."
+msgstr "脚注のスタイルをカスタマイズするためのCSSを入力してください。"
+
+msgid "Show Footnotes List"
+msgstr "脚注一覧の表示"
+
+msgid "Display footnotes list at the end of the article"
+msgstr "記事の末尾に脚注一覧を表示する"
+
+msgid "Preview"
+msgstr "プレビュー"
+
+msgid "This is a footnote preview"
+msgstr "これは脚注のプレビューです"
+
+msgid "This is an example footnote. The preview will update in real-time when you change the styles."
+msgstr "これは脚注の例です。スタイルを変更すると、このプレビューにリアルタイムで反映されます。"
+
+msgid "Footnotes"
+msgstr "脚注"
+
+msgid "Return to content"
+msgstr "元の位置に戻る"

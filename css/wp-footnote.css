@@ -1,0 +1,437 @@
+/* 共通スタイル */
+.wp-footnote-ref {
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    margin: 0 2px;
+    font-size: 0.8em;
+    transition: all 0.3s ease;
+}
+
+/* 脚注スタイル */
+/* スタイル1（クラシック） */
+.wp-footnote-ref.style1 {
+    color: #0066cc;
+    padding: 0 3px;
+}
+
+.wp-footnote-ref.style1:hover {
+    background: #f0f0f0;
+}
+
+/* スタイル2（モダン） */
+.wp-footnote-ref.style2 {
+    background: #f0f0f0;
+    color: #333;
+    padding: 2px 6px;
+    border-radius: 12px;
+}
+
+.wp-footnote-ref.style2:hover {
+    background: #e0e0e0;
+}
+
+/* スタイル3（シャープ） */
+.wp-footnote-ref.style3 {
+    background: #333;
+    color: #fff;
+    padding: 2px 6px;
+}
+
+.wp-footnote-ref.style3:hover {
+    background: #555;
+}
+
+/* スタイル4（ミニマル） */
+.wp-footnote-ref.style4 {
+    color: #666;
+    font-weight: 300;
+    border-bottom: 1px dotted #999;
+    padding: 0 2px;
+}
+
+.wp-footnote-ref.style4:hover {
+    color: #333;
+    border-bottom-style: solid;
+}
+
+/* スタイル5（ボールド） */
+.wp-footnote-ref.style5 {
+    font-weight: 700;
+    color: #222;
+    background: #f8f8f8;
+    padding: 2px 8px;
+    border: 2px solid #222;
+}
+
+.wp-footnote-ref.style5:hover {
+    background: #222;
+    color: #fff;
+}
+
+/* スタイル6（アクセント） */
+.wp-footnote-ref.style6 {
+    background: #ff4081;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.wp-footnote-ref.style6:hover {
+    background: #f50057;
+}
+
+/* スタイル7（ソフト） */
+.wp-footnote-ref.style7 {
+    background: #e1f5fe;
+    color: #0288d1;
+    padding: 2px 8px;
+    border-radius: 8px;
+    border: 1px solid #b3e5fc;
+}
+
+.wp-footnote-ref.style7:hover {
+    background: #b3e5fc;
+}
+
+/* スタイル8（フォーマル） */
+.wp-footnote-ref.style8 {
+    background: #1a237e;
+    color: #fff;
+    padding: 2px 8px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+.wp-footnote-ref.style8:hover {
+    background: #283593;
+}
+
+/* スタイル9（ポップ） */
+.wp-footnote-ref.style9 {
+    background: #ffeb3b;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 16px;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.wp-footnote-ref.style9:hover {
+    background: #fdd835;
+    transform: scale(1.1);
+}
+
+/* スタイル10（エレガント） */
+.wp-footnote-ref.style10 {
+    color: #6a1b9a;
+    padding: 2px 8px;
+    border: 1px solid #6a1b9a;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+.wp-footnote-ref.style10:hover {
+    background: #6a1b9a;
+    color: #fff;
+}
+
+/* スタイル11（フラット） */
+.wp-footnote-ref.style11 {
+    background: #546e7a;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+}
+
+.wp-footnote-ref.style11:hover {
+    background: #37474f;
+}
+
+/* スタイル12（グラデーション） */
+.wp-footnote-ref.style12 {
+    background: linear-gradient(45deg, #ff6b6b, #556270);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.wp-footnote-ref.style12:hover {
+    background: linear-gradient(45deg, #556270, #ff6b6b);
+}
+
+/* スタイル13（シンプルライン） */
+.wp-footnote-ref.style13 {
+    color: #333;
+    padding: 0 4px;
+    border-bottom: 2px solid #2196f3;
+}
+
+.wp-footnote-ref.style13:hover {
+    border-bottom-color: #1976d2;
+    background: #e3f2fd;
+}
+
+/* スタイル14（3Dエフェクト） */
+.wp-footnote-ref.style14 {
+    background: #4caf50;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 0 #388e3c;
+    transform: translateY(0);
+}
+
+.wp-footnote-ref.style14:hover {
+    transform: translateY(2px);
+    box-shadow: 0 0 0 #388e3c;
+}
+
+/* スタイル15（ネオン） */
+.wp-footnote-ref.style15 {
+    background: #000;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6;
+    box-shadow: 0 0 5px #0073e6;
+}
+
+.wp-footnote-ref.style15:hover {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6;
+    box-shadow: 0 0 10px #0073e6;
+}
+
+/* ポップアップスタイル */
+/* ポップアップ1（シンプル） */
+.wp-footnote-ref.popup1::after {
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ポップアップ2（ライト） */
+.wp-footnote-ref.popup2::after {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ポップアップ3（ダーク） */
+.wp-footnote-ref.popup3::after {
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ポップアップ4（グラス） */
+.wp-footnote-ref.popup4::after {
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+}
+
+/* ポップアップ5（カラフル） */
+.wp-footnote-ref.popup5::after {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: #fff;
+    border-radius: 8px;
+}
+
+/* ポップアップ6（モダン） */
+.wp-footnote-ref.popup6::after {
+    background: #fff;
+    color: #333;
+    border-left: 4px solid #3b82f6;
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ポップアップ7（ミニマル） */
+.wp-footnote-ref.popup7::after {
+    background: #f8f9fa;
+    color: #333;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ポップアップ8（エレガント） */
+.wp-footnote-ref.popup8::after {
+    background: #1e293b;
+    color: #fff;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ポップアップ9（ソフト） */
+.wp-footnote-ref.popup9::after {
+    background: #f0f9ff;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+}
+
+/* ポップアップ10（シャープ） */
+.wp-footnote-ref.popup10::after {
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+}
+
+/* ポップアップ11（3D） */
+.wp-footnote-ref.popup11::after {
+    background: #fff;
+    color: #333;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+    transform: perspective(1000px) rotateX(10deg);
+}
+
+/* ポップアップ12（ネオン） */
+.wp-footnote-ref.popup12::after {
+    background: #000;
+    color: #fff;
+    border: 1px solid #0ea5e9;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #0ea5e9;
+    text-shadow: 0 0 5px #0ea5e9;
+}
+
+/* ポップアップ13（グラデーションボーダー） */
+.wp-footnote-ref.popup13::after {
+    background: #fff;
+    color: #333;
+    border: 3px solid;
+    border-image: linear-gradient(45deg, #f97316, #ec4899) 1;
+    border-radius: 8px;
+}
+
+/* ポップアップ14（フロスト） */
+.wp-footnote-ref.popup14::after {
+    background: rgba(255,255,255,0.7);
+    color: #333;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 16px;
+}
+
+/* ポップアップ15（ダイナミック） */
+.wp-footnote-ref.popup15::after {
+    background: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: popupPulse 2s infinite;
+}
+
+@keyframes popupPulse {
+    0% { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    50% { box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+    100% { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+}
+
+/* 共通のポップアップベーススタイル */
+.wp-footnote-ref::after {
+    content: attr(data-footnote);
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    min-width: 200px;
+    max-width: 300px;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.wp-footnote-ref:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 脚注一覧 */
+.wp-footnotes-list {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.wp-footnotes-list h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.wp-footnotes-list ol {
+    padding-left: 30px;
+    margin: 0;
+    list-style: decimal !important;
+    list-style-position: outside !important;
+    counter-reset: footnote;
+}
+
+.wp-footnotes-list ol > li {
+    list-style: decimal !important;
+    display: list-item !important;
+}
+
+.wp-footnotes-list li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    color: #666;
+    padding-left: 10px;
+}
+
+/* 戻るリンク */
+.footnote-return {
+    display: inline-block;
+    margin-left: 5px;
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 0.9em;
+}
+
+.footnote-return:hover {
+    text-decoration: underline;
+}
+
+/* 管理画面のプレビュー */
+.wp-footnote-preview {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.wp-footnote-preview h2 {
+    margin-top: 0;
+}
+
+/* プレビュー用のポップアップ位置調整 */
+.wp-footnote-preview .wp-footnote-ref::after {
+    bottom: 140%;
+    left: 0;
+    transform: translateX(0);
+}
