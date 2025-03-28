@@ -1,5 +1,5 @@
 /* 共通スタイル */
-.simple-footnotes-ref {
+.smart-footnotes-ref {
     cursor: pointer;
     text-decoration: none;
     position: relative;
@@ -10,53 +10,53 @@
 
 /* 脚注スタイル */
 /* スタイル1（クラシック） */
-.simple-footnotes-ref.style1 {
+.smart-footnotes-ref.style1 {
     color: #0066cc;
     padding: 0 3px;
 }
 
-.simple-footnotes-ref.style1:hover {
+.smart-footnotes-ref.style1:hover {
     background: #f0f0f0;
 }
 
 /* スタイル2（モダン） */
-.simple-footnotes-ref.style2 {
+.smart-footnotes-ref.style2 {
     background: #f0f0f0;
     color: #333;
     padding: 2px 6px;
     border-radius: 12px;
 }
 
-.simple-footnotes-ref.style2:hover {
+.smart-footnotes-ref.style2:hover {
     background: #e0e0e0;
 }
 
 /* スタイル3（シャープ） */
-.simple-footnotes-ref.style3 {
+.smart-footnotes-ref.style3 {
     background: #333;
     color: #fff;
     padding: 2px 6px;
 }
 
-.simple-footnotes-ref.style3:hover {
+.smart-footnotes-ref.style3:hover {
     background: #555;
 }
 
 /* スタイル4（ミニマル） */
-.simple-footnotes-ref.style4 {
+.smart-footnotes-ref.style4 {
     color: #666;
     font-weight: 300;
     border-bottom: 1px dotted #999;
     padding: 0 2px;
 }
 
-.simple-footnotes-ref.style4:hover {
+.smart-footnotes-ref.style4:hover {
     color: #333;
     border-bottom-style: solid;
 }
 
 /* スタイル5（ボールド） */
-.simple-footnotes-ref.style5 {
+.smart-footnotes-ref.style5 {
     font-weight: 700;
     color: #222;
     background: #f8f8f8;
@@ -64,13 +64,13 @@
     border: 2px solid #222;
 }
 
-.simple-footnotes-ref.style5:hover {
+.smart-footnotes-ref.style5:hover {
     background: #222;
     color: #fff;
 }
 
 /* スタイル6（アクセント） */
-.simple-footnotes-ref.style6 {
+.smart-footnotes-ref.style6 {
     background: #ff4081;
     color: #fff;
     padding: 2px 8px;
@@ -78,12 +78,12 @@
     font-weight: 500;
 }
 
-.simple-footnotes-ref.style6:hover {
+.smart-footnotes-ref.style6:hover {
     background: #f50057;
 }
 
 /* スタイル7（ソフト） */
-.simple-footnotes-ref.style7 {
+.smart-footnotes-ref.style7 {
     background: #e1f5fe;
     color: #0288d1;
     padding: 2px 8px;
@@ -91,12 +91,12 @@
     border: 1px solid #b3e5fc;
 }
 
-.simple-footnotes-ref.style7:hover {
+.smart-footnotes-ref.style7:hover {
     background: #b3e5fc;
 }
 
 /* スタイル8（フォーマル） */
-.simple-footnotes-ref.style8 {
+.smart-footnotes-ref.style8 {
     background: #1a237e;
     color: #fff;
     padding: 2px 8px;
@@ -104,12 +104,12 @@
     border-radius: 2px;
 }
 
-.simple-footnotes-ref.style8:hover {
+.smart-footnotes-ref.style8:hover {
     background: #283593;
 }
 
 /* スタイル9（ポップ） */
-.simple-footnotes-ref.style9 {
+.smart-footnotes-ref.style9 {
     background: #ffeb3b;
     color: #333;
     padding: 2px 8px;
@@ -118,13 +118,13 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.simple-footnotes-ref.style9:hover {
+.smart-footnotes-ref.style9:hover {
     background: #fdd835;
     transform: scale(1.1);
 }
 
 /* スタイル10（エレガント） */
-.simple-footnotes-ref.style10 {
+.smart-footnotes-ref.style10 {
     color: #6a1b9a;
     padding: 2px 8px;
     border: 1px solid #6a1b9a;
@@ -132,13 +132,13 @@
     font-style: italic;
 }
 
-.simple-footnotes-ref.style10:hover {
+.smart-footnotes-ref.style10:hover {
     background: #6a1b9a;
     color: #fff;
 }
 
 /* スタイル11（フラット） */
-.simple-footnotes-ref.style11 {
+.smart-footnotes-ref.style11 {
     background: #546e7a;
     color: #fff;
     padding: 2px 8px;
@@ -148,12 +148,12 @@
     letter-spacing: 1px;
 }
 
-.simple-footnotes-ref.style11:hover {
+.smart-footnotes-ref.style11:hover {
     background: #37474f;
 }
 
 /* スタイル12（グラデーション） */
-.simple-footnotes-ref.style12 {
+.smart-footnotes-ref.style12 {
     background: linear-gradient(45deg, #ff6b6b, #556270);
     color: #fff;
     padding: 2px 8px;
@@ -161,24 +161,24 @@
     font-weight: 500;
 }
 
-.simple-footnotes-ref.style12:hover {
+.smart-footnotes-ref.style12:hover {
     background: linear-gradient(45deg, #556270, #ff6b6b);
 }
 
 /* スタイル13（シンプルライン） */
-.simple-footnotes-ref.style13 {
+.smart-footnotes-ref.style13 {
     color: #333;
     padding: 0 4px;
     border-bottom: 2px solid #2196f3;
 }
 
-.simple-footnotes-ref.style13:hover {
+.smart-footnotes-ref.style13:hover {
     border-bottom-color: #1976d2;
     background: #e3f2fd;
 }
 
 /* スタイル14（3Dエフェクト） */
-.simple-footnotes-ref.style14 {
+.smart-footnotes-ref.style14 {
     background: #4caf50;
     color: #fff;
     padding: 2px 8px;
@@ -187,13 +187,13 @@
     transform: translateY(0);
 }
 
-.simple-footnotes-ref.style14:hover {
+.smart-footnotes-ref.style14:hover {
     transform: translateY(2px);
     box-shadow: 0 0 0 #388e3c;
 }
 
 /* スタイル15（ネオン） */
-.simple-footnotes-ref.style15 {
+.smart-footnotes-ref.style15 {
     background: #000;
     color: #fff;
     padding: 2px 8px;
@@ -202,14 +202,14 @@
     box-shadow: 0 0 5px #0073e6;
 }
 
-.simple-footnotes-ref.style15:hover {
+.smart-footnotes-ref.style15:hover {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6;
     box-shadow: 0 0 10px #0073e6;
 }
 
 /* ポップアップスタイル */
 /* ポップアップ1（シンプル） */
-.simple-footnotes-ref.popup1::after {
+.smart-footnotes-ref.popup1::after {
     background: #333;
     color: #fff;
     border-radius: 4px;
@@ -217,7 +217,7 @@
 }
 
 /* ポップアップ2（ライト） */
-.simple-footnotes-ref.popup2::after {
+.smart-footnotes-ref.popup2::after {
     background: #fff;
     color: #333;
     border: 1px solid #ddd;
@@ -226,7 +226,7 @@
 }
 
 /* ポップアップ3（ダーク） */
-.simple-footnotes-ref.popup3::after {
+.smart-footnotes-ref.popup3::after {
     background: #1a1a1a;
     color: #fff;
     border-radius: 8px;
@@ -234,7 +234,7 @@
 }
 
 /* ポップアップ4（グラス） */
-.simple-footnotes-ref.popup4::after {
+.smart-footnotes-ref.popup4::after {
     background: rgba(255,255,255,0.9);
     color: #333;
     backdrop-filter: blur(10px);
@@ -243,14 +243,14 @@
 }
 
 /* ポップアップ5（カラフル） */
-.simple-footnotes-ref.popup5::after {
+.smart-footnotes-ref.popup5::after {
     background: linear-gradient(135deg, #6366f1, #a855f7);
     color: #fff;
     border-radius: 8px;
 }
 
 /* ポップアップ6（モダン） */
-.simple-footnotes-ref.popup6::after {
+.smart-footnotes-ref.popup6::after {
     background: #fff;
     color: #333;
     border-left: 4px solid #3b82f6;
@@ -259,7 +259,7 @@
 }
 
 /* ポップアップ7（ミニマル） */
-.simple-footnotes-ref.popup7::after {
+.smart-footnotes-ref.popup7::after {
     background: #f8f9fa;
     color: #333;
     border: none;
@@ -268,7 +268,7 @@
 }
 
 /* ポップアップ8（エレガント） */
-.simple-footnotes-ref.popup8::after {
+.smart-footnotes-ref.popup8::after {
     background: #1e293b;
     color: #fff;
     border: 1px solid #475569;
@@ -277,7 +277,7 @@
 }
 
 /* ポップアップ9（ソフト） */
-.simple-footnotes-ref.popup9::after {
+.smart-footnotes-ref.popup9::after {
     background: #f0f9ff;
     color: #0369a1;
     border: 1px solid #bae6fd;
@@ -285,7 +285,7 @@
 }
 
 /* ポップアップ10（シャープ） */
-.simple-footnotes-ref.popup10::after {
+.smart-footnotes-ref.popup10::after {
     background: #000;
     color: #fff;
     border-radius: 0;
@@ -293,7 +293,7 @@
 }
 
 /* ポップアップ11（3D） */
-.simple-footnotes-ref.popup11::after {
+.smart-footnotes-ref.popup11::after {
     background: #fff;
     color: #333;
     border: 1px solid #e5e7eb;
@@ -303,7 +303,7 @@
 }
 
 /* ポップアップ12（ネオン） */
-.simple-footnotes-ref.popup12::after {
+.smart-footnotes-ref.popup12::after {
     background: #000;
     color: #fff;
     border: 1px solid #0ea5e9;
@@ -313,7 +313,7 @@
 }
 
 /* ポップアップ13（グラデーションボーダー） */
-.simple-footnotes-ref.popup13::after {
+.smart-footnotes-ref.popup13::after {
     background: #fff;
     color: #333;
     border: 3px solid;
@@ -322,7 +322,7 @@
 }
 
 /* ポップアップ14（フロスト） */
-.simple-footnotes-ref.popup14::after {
+.smart-footnotes-ref.popup14::after {
     background: rgba(255,255,255,0.7);
     color: #333;
     backdrop-filter: blur(12px);
@@ -331,7 +331,7 @@
 }
 
 /* ポップアップ15（ダイナミック） */
-.simple-footnotes-ref.popup15::after {
+.smart-footnotes-ref.popup15::after {
     background: #fff;
     color: #333;
     border-radius: 8px;
@@ -497,23 +497,23 @@
 }
 
 /* 疑似要素のポップアップを無効化 */
-.simple-footnotes-ref::after {
+.smart-footnotes-ref::after {
     content: none;
 }
 
 /* 脚注一覧 */
-.simple-footnotes-list {
+.smart-footnotes-list {
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid #ddd;
 }
 
-.simple-footnotes-list h4 {
+.smart-footnotes-list h4 {
     font-size: 1.2em;
     margin-bottom: 20px;
 }
 
-.simple-footnotes-list ol {
+.smart-footnotes-list ol {
     padding-left: 30px;
     margin: 0;
     list-style: decimal !important;
@@ -521,12 +521,12 @@
     counter-reset: footnote;
 }
 
-.simple-footnotes-list ol > li {
+.smart-footnotes-list ol > li {
     list-style: decimal !important;
     display: list-item !important;
 }
 
-.simple-footnotes-list li {
+.smart-footnotes-list li {
     margin-bottom: 10px;
     font-size: 0.9em;
     color: #666;
@@ -547,7 +547,7 @@
 }
 
 /* 管理画面のプレビュー */
-.simple-footnotes-preview {
+.smart-footnotes-preview {
     margin-top: 30px;
     padding: 20px;
     background: #fff;
@@ -555,12 +555,12 @@
     border-radius: 4px;
 }
 
-.simple-footnotes-preview h2 {
+.smart-footnotes-preview h2 {
     margin-top: 0;
 }
 
 /* プレビュー用のポップアップ位置調整 */
-.simple-footnotes-preview .simple-footnotes-ref::after {
+.smart-footnotes-preview .smart-footnotes-ref::after {
     bottom: 140%;
     left: 0;
     transform: translateX(0);

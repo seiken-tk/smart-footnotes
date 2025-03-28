@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     // 脚注参照のクリックイベント
-    $('.simple-footnotes-ref').on('click', function(e) {
+    $('.smart-footnotes-ref').on('click', function(e) {
         e.preventDefault();
         var targetId = $(this).attr('id').replace('ref-', '');
         var target = $('#' + targetId);
@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
         class: 'footnote-popup-container'
     }).appendTo('body');
     
-    $('.simple-footnotes-ref').each(function() {
+    $('.smart-footnotes-ref').each(function() {
         var $ref = $(this);
         var content = $ref.attr('data-footnote');
         var popupId = 'popup-' + $ref.attr('id');
@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
         // ポップアップ要素の作成（HTMLをデコード）
         var $popup = $('<div>', {
             id: popupId,
-            class: 'footnote-popup ' + $ref.attr('class').replace('simple-footnotes-ref', '').trim(),
+            class: 'footnote-popup ' + $ref.attr('class').replace('smart-footnotes-ref', '').trim(),
             'data-ref-id': $ref.attr('id')
         }).html(content); // .html()を使用してHTMLを適切に処理
         
@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
     });
 
     // ホバーイベントの設定
-    $('.simple-footnotes-ref').hover(
+    $('.smart-footnotes-ref').hover(
         function() {
             var $ref = $(this);
             var popupId = 'popup-' + $ref.attr('id');
@@ -85,12 +85,12 @@ jQuery(document).ready(function($) {
 
     // モバイルデバイスでのホバー対応
     if ('ontouchstart' in window) {
-        $('.simple-footnotes-ref').on('click', function(e) {
+        $('.smart-footnotes-ref').on('click', function(e) {
             // タッチデバイスでは最初のタップでツールチップを表示
             var $this = $(this);
             if (!$this.hasClass('touched')) {
                 e.preventDefault();
-                $('.simple-footnotes-ref').removeClass('touched');
+                $('.smart-footnotes-ref').removeClass('touched');
                 $('.footnote-popup').removeClass('active');
                 $this.addClass('touched');
                 
@@ -112,9 +112,9 @@ jQuery(document).ready(function($) {
 
         // 他の場所をタップしたらツールチップを非表示
         $(document).on('touchstart', function(e) {
-            if (!$(e.target).closest('.simple-footnotes-ref').length &&
+            if (!$(e.target).closest('.smart-footnotes-ref').length &&
                 !$(e.target).closest('.footnote-popup').length) {
-                $('.simple-footnotes-ref').removeClass('touched');
+                $('.smart-footnotes-ref').removeClass('touched');
                 $('.footnote-popup').removeClass('active');
             }
         });
