@@ -8,25 +8,11 @@ wp_enqueue_style('smart-footnotes', plugins_url('../css/smart-footnotes.css', __
     <div class="smart-footnotes-usage">
         <h2><?php esc_html_e('使い方', 'smart-footnotes'); ?></h2>
         <div class="usage-content">
-            <h3><?php esc_html_e('1. 脚注の追加', 'smart-footnotes'); ?></h3>
+            <h3><?php esc_html_e('脚注の追加方法とカスタマイズ方法', 'smart-footnotes'); ?></h3>
             <p><?php esc_html_e('投稿エディタで以下のようにショートコードを使用します：', 'smart-footnotes'); ?></p>
             <pre>[sfnote]ここに脚注の内容を入力します。[/sfnote]</pre>
-            
-            <h3><?php esc_html_e('2. 脚注の表示', 'smart-footnotes'); ?></h3>
-            <ul>
-                <li><?php esc_html_e('脚注は自動的に番号付けされ、記事内の該当箇所に表示されます。', 'smart-footnotes'); ?></li>
-                <li><?php esc_html_e('脚注番号にマウスを重ねると、脚注の内容がポップアップ表示されます。', 'smart-footnotes'); ?></li>
-                <li><?php esc_html_e('脚注番号をクリックすると、記事末尾の脚注一覧の該当箇所にスクロールします。', 'smart-footnotes'); ?></li>
-                <li><?php esc_html_e('脚注一覧の戻るボタンをクリックすると、元の位置に戻ります。', 'smart-footnotes'); ?></li>
-            </ul>
-
-            <h3><?php esc_html_e('3. カスタマイズ', 'smart-footnotes'); ?></h3>
-            <ul>
-                <li><?php esc_html_e('下記の設定から、お好みの脚注スタイルとポップアップスタイルを選択できます。', 'smart-footnotes'); ?></li>
-                <li><?php esc_html_e('カスタムCSSを使用して、独自のスタイルを適用することもできます。', 'smart-footnotes'); ?></li>
-                <li><?php esc_html_e('脚注一覧の表示/非表示を切り替えることができます。', 'smart-footnotes'); ?></li>
-                <li><?php esc_html_e('脚注一覧の戻るボタンの文字列を変更できます。', 'smart-footnotes'); ?></li>
-            </ul>
+            <p><?php esc_html_e('脚注は自動的に番号付けされ、記事内の該当箇所に表示されます。マウスを重ねると脚注の内容がポップアップ表示されます。', 'smart-footnotes'); ?></p>
+            <p><?php esc_html_e('下記の設定から、お好みの脚注スタイルとポップアップスタイルを選択できます。', 'smart-footnotes'); ?></p>
         </div>
     </div>
 
