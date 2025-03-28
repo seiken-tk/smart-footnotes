@@ -139,12 +139,36 @@ class Smart_Footnotes {
     }
 
     public function register_settings() {
-        register_setting('smart_footnotes_options', 'smart_footnotes_style');
-        register_setting('smart_footnotes_options', 'smart_footnotes_popup_style');
-        register_setting('smart_footnotes_options', 'smart_footnotes_custom_css');
-        register_setting('smart_footnotes_options', 'smart_footnotes_show_list');
-        register_setting('smart_footnotes_options', 'smart_footnotes_return_text');
-        register_setting('smart_footnotes_options', 'smart_footnotes_heading');
+        register_setting(
+            'smart_footnotes_options',
+            'smart_footnotes_style',
+            array('sanitize_callback' => 'sanitize_text_field')
+        );
+        register_setting(
+            'smart_footnotes_options',
+            'smart_footnotes_popup_style',
+            array('sanitize_callback' => 'sanitize_text_field')
+        );
+        register_setting(
+            'smart_footnotes_options',
+            'smart_footnotes_custom_css',
+            array('sanitize_callback' => 'sanitize_textarea_field')
+        );
+        register_setting(
+            'smart_footnotes_options',
+            'smart_footnotes_show_list',
+            array('sanitize_callback' => 'rest_sanitize_boolean')
+        );
+        register_setting(
+            'smart_footnotes_options',
+            'smart_footnotes_return_text',
+            array('sanitize_callback' => 'sanitize_text_field')
+        );
+        register_setting(
+            'smart_footnotes_options',
+            'smart_footnotes_heading',
+            array('sanitize_callback' => 'sanitize_text_field')
+        );
     }
 
     public function render_settings_page() {
