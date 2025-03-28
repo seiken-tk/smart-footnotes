@@ -1,4 +1,4 @@
-=== WP Footnote ===
+=== Simple Footnotes ===
 Contributors: seiken
 Tags: footnotes, content, reference
 Requires at least: 5.0
@@ -12,7 +12,7 @@ WordPressの投稿に脚注を簡単に追加できるプラグインです。
 
 == Description ==
 
-WP Footnoteは、WordPressの投稿やページに脚注を簡単に追加できるプラグインです。
+Simple Footnotesは、WordPressの投稿やページに脚注を簡単に追加できるプラグインです。
 ショートコードを使用して脚注を追加し、自動的に番号付けされた脚注を記事の末尾に表示します。
 
 主な機能：
@@ -29,14 +29,14 @@ WP Footnoteは、WordPressの投稿やページに脚注を簡単に追加でき
 
 1. プラグインを「wp-content/plugins/」ディレクトリにアップロードするか、WordPress管理画面からプラグインを直接インストールします。
 2. WordPress管理画面でプラグインを有効化します。
-3. 設定 > WP Footnote から、必要に応じて設定を行います。
+3. 設定 > Simple Footnotes から、必要に応じて設定を行います。
 
 == Frequently Asked Questions ==
 
 = 脚注の追加方法は？ =
 
-[wpnote]脚注の内容[/wpnote]というショートコードを使用します。
-例：この文章に脚注を追加します[wpnote]これが脚注の内容です[/wpnote]。
+[sfnote]脚注の内容[/sfnote]というショートコードを使用します。
+例：この文章に脚注を追加します[sfnote]これが脚注の内容です[/sfnote]。
 
 = 脚注のスタイルをカスタマイズできますか？ =
 

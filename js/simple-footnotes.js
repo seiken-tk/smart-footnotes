@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     // 脚注参照のクリックイベント
-    $('.wp-footnote-ref').on('click', function(e) {
+    $('.simple-footnotes-ref').on('click', function(e) {
         e.preventDefault();
         var targetId = $(this).attr('id').replace('ref-', '');
         var target = $('#' + targetId);
@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
     });
 
     // ポップアップの作成
-    $('.wp-footnote-ref').each(function() {
+    $('.simple-footnotes-ref').each(function() {
         var $ref = $(this);
         var content = $ref.attr('data-footnote');
         var popupId = 'popup-' + $ref.attr('id');
@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
         // ポップアップ要素の作成（HTMLをデコード）
         var $popup = $('<div>', {
             id: popupId,
-            class: 'footnote-popup ' + $ref.attr('class').replace('wp-footnote-ref', '').trim()
+            class: 'footnote-popup ' + $ref.attr('class').replace('simple-footnotes-ref', '').trim()
         }).html(content); // .html()を使用してHTMLを適切に処理
         
         // ポップアップの配置
@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
     });
 
     // ホバーイベントの設定
-    $('.wp-footnote-ref').hover(
+    $('.simple-footnotes-ref').hover(
         function() {
             var popupId = 'popup-' + $(this).attr('id');
             $('#' + popupId).addClass('active');
@@ -69,20 +69,20 @@ jQuery(document).ready(function($) {
 
     // モバイルデバイスでのホバー対応
     if ('ontouchstart' in window) {
-        $('.wp-footnote-ref').on('click', function(e) {
+        $('.simple-footnotes-ref').on('click', function(e) {
             // タッチデバイスでは最初のタップでツールチップを表示
             var $this = $(this);
             if (!$this.hasClass('touched')) {
                 e.preventDefault();
-                $('.wp-footnote-ref').removeClass('touched');
+                $('.simple-footnotes-ref').removeClass('touched');
                 $this.addClass('touched');
             }
         });
 
         // 他の場所をタップしたらツールチップを非表示
         $(document).on('touchstart', function(e) {
-            if (!$(e.target).closest('.wp-footnote-ref').length) {
-                $('.wp-footnote-ref').removeClass('touched');
+            if (!$(e.target).closest('.simple-footnotes-ref').length) {
+                $('.simple-footnotes-ref').removeClass('touched');
             }
         });
     }
