@@ -37,6 +37,10 @@ class Simple_Footnotes {
         add_action('admin_init', array($this, 'register_settings'));
         add_shortcode('sfnote', array($this, 'footnote_shortcode'));
         add_filter('the_content', array($this, 'append_footnotes'), 999);
+        
+        // プラグイン一覧に設定リンクを追加
+        $plugin_file = plugin_basename(__FILE__);
+        add_filter("plugin_action_links_{$plugin_file}", array($this, 'add_plugin_action_links'));
     }
 
     public function init() {
@@ -149,6 +153,18 @@ class Simple_Footnotes {
         }
 
         require_once plugin_dir_path(__FILE__) . 'admin/settings.php';
+    }
+    
+    /**
+     * プラグイン一覧画面のアクションリンクに「設定」リンクを追加
+     *
+     * @param array $links 既存のアクションリンク
+     * @return array 更新されたアクションリンク
+     */
+    public function add_plugin_action_links($links) {
+        $settings_link = '<a href="' . admin_url('options-general.php?page=simple-footnotes') . '">' . __('設定', 'simple-footnotes') . '</a>';
+        array_unshift($links, $settings_link);
+        return $links;
     }
 }
 

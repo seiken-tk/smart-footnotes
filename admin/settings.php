@@ -294,6 +294,60 @@ jQuery(document).ready(function($) {
                 return (className.match(/(^|\s)(style|popup)\S+/g) || []).join(' ');
             })
             .addClass(selectedStyle + ' ' + selectedPopupStyle);
+            
+        // ポップアップの更新
+        updatePopup();
+    }
+    
+    // ポップアップの作成と更新
+    function updatePopup() {
+        // 既存のポップアップコンテナを削除
+        $('.admin-footnote-popup-container').remove();
+        
+        // ポップアップコンテナの作成
+        var $popupContainer = $('<div>', {
+            class: 'admin-footnote-popup-container footnote-popup-container'
+        }).appendTo('body');
+        
+        // プレビュー用の脚注参照にポップアップを追加
+        $('.preview-footnote').each(function() {
+            var $ref = $(this);
+            var content = $ref.attr('data-footnote');
+            var popupId = 'popup-' + $ref.attr('id');
+            
+            // ポップアップ要素の作成
+            var $popup = $('<div>', {
+                id: popupId,
+                class: 'footnote-popup ' + $ref.attr('class').replace('simple-footnotes-ref preview-footnote', '').trim(),
+                'data-ref-id': $ref.attr('id')
+            }).html(content);
+            
+            // ポップアップをコンテナに追加
+            $popupContainer.append($popup);
+        });
+        
+        // ホバーイベントの設定
+        $('.preview-footnote').hover(
+            function() {
+                var $ref = $(this);
+                var popupId = 'popup-' + $ref.attr('id');
+                var $popup = $('#' + popupId);
+                
+                // ポップアップの位置を参照要素に合わせて調整
+                var refOffset = $ref.offset();
+                var refWidth = $ref.outerWidth();
+                var popupWidth = $popup.outerWidth();
+                
+                $popup.css({
+                    'top': refOffset.top - $popup.outerHeight() - 10,
+                    'left': refOffset.left + (refWidth / 2) - (popupWidth / 2)
+                }).addClass('active');
+            },
+            function() {
+                var popupId = 'popup-' + $(this).attr('id');
+                $('#' + popupId).removeClass('active');
+            }
+        );
     }
 
     // スタイル変更時のイベントハンドラ
