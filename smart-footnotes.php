@@ -1,14 +1,14 @@
 <?php
 /**
  * Plugin Name: SmartFootnotes
- * Plugin URI: https://seiken.tk/wp-plugin/smart-footnotes
+ * Plugin URI: https://wapon.co.jp/products/wp-plugin/smart-footnotes/
  * Description: WordPressの投稿に脚注を簡単に追加できるプラグインです。ショートコードを使用して脚注を追加し、自動的に番号付けされた脚注を記事の末尾に表示します。ホバーで脚注内容の確認や、クリックでの移動にも対応しています。
  * Version: 1.0.0
  * Requires at least: 5.0
  * Requires PHP: 7.2
- * Author: Seiken TAKAMATSU
- * Author URI: https://seiken.tk
- * Text Domain: smart-footnotes
+ * Author: Seiken TAKAMATSU (wapon Inc.)
+ * Author URI: https://wapon.co.jp/
+ * Text Domain: smartfootnotes
  * Domain Path: /languages
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
