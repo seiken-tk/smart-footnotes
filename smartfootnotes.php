@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: SmartFootnotes
- * Plugin URI: https://wapon.co.jp/products/wp-plugin/smart-footnotes/
+ * Plugin URI: https://wapon.co.jp/products/wp-plugin/smartfootnotes/
  * Description: WordPressの投稿に脚注を簡単に追加できるプラグインです。ショートコードを使用して脚注を追加し、自動的に番号付けされた脚注を記事の末尾に表示します。ホバーで脚注内容の確認や、クリックでの移動にも対応しています。
  * Version: 1.0.0
  * Requires at least: 5.0
@@ -44,8 +44,6 @@ class Smart_Footnotes {
     }
 
     public function init() {
-        load_plugin_textdomain('smart-footnotes', false, dirname(plugin_basename(__FILE__)) . '/languages');
-        
         // デフォルト設定の登録
         if (false === get_option('smart_footnotes_return_text')) {
             update_option('smart_footnotes_return_text', '↩');
@@ -54,28 +52,28 @@ class Smart_Footnotes {
             update_option('smart_footnotes_popup_style', 'popup1');
         }
         if (false === get_option('smart_footnotes_heading')) {
-            update_option('smart_footnotes_heading', __('脚注', 'smart-footnotes'));
+            update_option('smart_footnotes_heading', __('脚注', 'smartfootnotes'));
         }
     }
 
     public function enqueue_scripts() {
         wp_enqueue_style(
-            'smart-footnotes',
-            plugins_url('css/smart-footnotes.css', __FILE__),
+            'smartfootnotes',
+            plugins_url('css/smartfootnotes.css', __FILE__),
             array(),
             '1.0.0'
         );
 
         wp_enqueue_script(
-            'smart-footnotes',
-            plugins_url('js/smart-footnotes.js', __FILE__),
+            'smartfootnotes',
+            plugins_url('js/smartfootnotes.js', __FILE__),
             array('jquery'),
             '1.0.0',
             true
         );
 
         // CSSクラスをJSに渡す
-        wp_localize_script('smart-footnotes', 'smartFootnotesSettings', array(
+        wp_localize_script('smartfootnotes', 'smartFootnotesSettings', array(
             'popupStyle' => get_option('smart_footnotes_popup_style', 'popup1')
         ));
     }
@@ -91,7 +89,7 @@ class Smart_Footnotes {
         $style = get_option('smart_footnotes_style', 'style1');
         $popup_style = get_option('smart_footnotes_popup_style', 'popup1');
         $html = sprintf(
-            '<sup class="smart-footnotes-ref %s %s" id="ref-%s" data-footnote="%s">[%d]</sup>',
+            '<sup class="smartfootnotes-ref %s %s" id="ref-%s" data-footnote="%s">[%d]</sup>',
             esc_attr($style),
             esc_attr($popup_style),
             esc_attr($footnote_id),
@@ -108,8 +106,8 @@ class Smart_Footnotes {
         }
 
         $return_text = get_option('smart_footnotes_return_text', '↩');
-        $footnotes_html = '<div class="smart-footnotes-list">';
-        $footnotes_html .= '<h4>' . esc_html(get_option('smart_footnotes_heading', __('脚注', 'smart-footnotes'))) . '</h4>';
+        $footnotes_html = '<div class="smartfootnotes-list">';
+        $footnotes_html .= '<h4>' . esc_html(get_option('smart_footnotes_heading', __('脚注', 'smartfootnotes'))) . '</h4>';
         $footnotes_html .= '<ol>';
 
         foreach ($this->footnotes as $num => $footnote) {
@@ -118,7 +116,7 @@ class Smart_Footnotes {
                 esc_attr($footnote['id']),
                 wp_kses_post($footnote['content']),
                 esc_attr($footnote['id']),
-                esc_attr__('元の位置に戻る', 'smart-footnotes'),
+                esc_attr__('元の位置に戻る', 'smartfootnotes'),
                 esc_html($return_text)
             );
         }
@@ -130,10 +128,10 @@ class Smart_Footnotes {
 
     public function add_admin_menu() {
         add_options_page(
-            __('SmartFootnotes Settings', 'smart-footnotes'),
-            __('SmartFootnotes', 'smart-footnotes'),
+            __('SmartFootnotes Settings', 'smartfootnotes'),
+            __('SmartFootnotes', 'smartfootnotes'),
             'manage_options',
-            'smart-footnotes',
+            'smartfootnotes',
             array($this, 'render_settings_page')
         );
     }
@@ -186,7 +184,7 @@ class Smart_Footnotes {
      * @return array 更新されたアクションリンク
      */
     public function add_plugin_action_links($links) {
-        $settings_link = '<a href="' . admin_url('options-general.php?page=smart-footnotes') . '">' . __('設定', 'smart-footnotes') . '</a>';
+        $settings_link = '<a href="' . admin_url('options-general.php?page=smartfootnotes') . '">' . __('設定', 'smartfootnotes') . '</a>';
         array_unshift($links, $settings_link);
         return $links;
     }
