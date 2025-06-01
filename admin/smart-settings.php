@@ -1,6 +1,8 @@
 <?php
-// プラグインのCSSとJSを管理画面にも読み込む
-wp_enqueue_style('smartfootnotes', plugins_url('../css/smartfootnotes.css', __FILE__));
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // 直接アクセス禁止
+}
+
 ?>
 <div class="wrap">
     <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
@@ -154,7 +156,9 @@ wp_enqueue_style('smartfootnotes', plugins_url('../css/smartfootnotes.css', __FI
     </div>
 </div>
 
-<style>
+<?php
+// 管理画面用のインラインCSSを追加
+$admin_css = '
 /* 管理画面用のスタイル */
 .smartfootnotes-usage {
     background: #fff;
@@ -266,20 +270,25 @@ wp_enqueue_style('smartfootnotes', plugins_url('../css/smartfootnotes.css', __FI
     margin-left: 5px;
     text-decoration: none;
 }
-</style>
+';
 
-<script>
+wp_add_inline_style('smartfootnotes-admin', $admin_css);
+?>
+
+<?php
+// 管理画面用のインラインJavaScriptを追加
+$admin_js = '
 jQuery(document).ready(function($) {
     // スタイル変更時のプレビュー更新
     function updatePreview() {
-        var selectedStyle = $('#smart_footnotes_style').val();
-        var selectedPopupStyle = $('#smart_footnotes_popup_style').val();
+        var selectedStyle = $("#smart_footnotes_style").val();
+        var selectedPopupStyle = $("#smart_footnotes_popup_style").val();
         
-        $('.preview-footnote')
+        $(".preview-footnote")
             .removeClass(function(index, className) {
-                return (className.match(/(^|\s)(style|popup)\S+/g) || []).join(' ');
+                return (className.match(/(^|\s)(style|popup)\S+/g) || []).join(" ");
             })
-            .addClass(selectedStyle + ' ' + selectedPopupStyle);
+            .addClass(selectedStyle + " " + selectedPopupStyle);
             
         // ポップアップの更新
         updatePopup();
@@ -288,24 +297,24 @@ jQuery(document).ready(function($) {
     // ポップアップの作成と更新
     function updatePopup() {
         // 既存のポップアップコンテナを削除
-        $('.admin-footnote-popup-container').remove();
+        $(".admin-footnote-popup-container").remove();
         
         // ポップアップコンテナの作成
-        var $popupContainer = $('<div>', {
-            class: 'admin-footnote-popup-container footnote-popup-container'
-        }).appendTo('body');
+        var $popupContainer = $("<div>", {
+            class: "admin-footnote-popup-container footnote-popup-container"
+        }).appendTo("body");
         
         // プレビュー用の脚注参照にポップアップを追加
-        $('.preview-footnote').each(function() {
+        $(".preview-footnote").each(function() {
             var $ref = $(this);
-            var content = $ref.attr('data-footnote');
-            var popupId = 'popup-' + $ref.attr('id');
+            var content = $ref.attr("data-footnote");
+            var popupId = "popup-" + $ref.attr("id");
             
             // ポップアップ要素の作成
-            var $popup = $('<div>', {
+            var $popup = $("<div>", {
                 id: popupId,
-                class: 'footnote-popup ' + $ref.attr('class').replace('smartfootnotes-ref preview-footnote', '').trim(),
-                'data-ref-id': $ref.attr('id')
+                class: "footnote-popup " + $ref.attr("class").replace("smartfootnotes-ref preview-footnote", "").trim(),
+                "data-ref-id": $ref.attr("id")
             }).html(content);
             
             // ポップアップをコンテナに追加
@@ -313,11 +322,11 @@ jQuery(document).ready(function($) {
         });
         
         // ホバーイベントの設定
-        $('.preview-footnote').hover(
+        $(".preview-footnote").hover(
             function() {
                 var $ref = $(this);
-                var popupId = 'popup-' + $ref.attr('id');
-                var $popup = $('#' + popupId);
+                var popupId = "popup-" + $ref.attr("id");
+                var $popup = $("#" + popupId);
                 
                 // ポップアップの位置を参照要素に合わせて調整
                 var refOffset = $ref.offset();
@@ -325,39 +334,39 @@ jQuery(document).ready(function($) {
                 var popupWidth = $popup.outerWidth();
                 
                 $popup.css({
-                    'top': refOffset.top - $popup.outerHeight() - 10,
-                    'left': refOffset.left + (refWidth / 2) - (popupWidth / 2)
-                }).addClass('active');
+                    "top": refOffset.top - $popup.outerHeight() - 10,
+                    "left": refOffset.left + (refWidth / 2) - (popupWidth / 2)
+                }).addClass("active");
             },
             function() {
-                var popupId = 'popup-' + $(this).attr('id');
-                $('#' + popupId).removeClass('active');
+                var popupId = "popup-" + $(this).attr("id");
+                $("#" + popupId).removeClass("active");
             }
         );
     }
 
     // スタイル変更時のイベントハンドラ
-    $('#smart_footnotes_style, #smart_footnotes_popup_style').on('change', function() {
+    $("#smart_footnotes_style, #smart_footnotes_popup_style").on("change", function() {
         updatePreview();
     });
 
     // 戻るボタンのテキスト変更時のプレビュー更新
-    $('#smart_footnotes_return_text').on('input', function() {
-        $('#preview-return').text($(this).val() || '↩');
+    $("#smart_footnotes_return_text").on("input", function() {
+        $("#preview-return").text($(this).val() || "↩");
     });
 
     // 脚注の見出し変更時のプレビュー更新
-    $('#smart_footnotes_heading').on('input', function() {
-        $('#preview-heading').text($(this).val() || '脚注');
+    $("#smart_footnotes_heading").on("input", function() {
+        $("#preview-heading").text($(this).val() || "脚注");
     });
 
     // プレビューのクリックイベント
-    $('.smartfootnotes-preview a').on('click', function(e) {
+    $(".smartfootnotes-preview a").on("click", function(e) {
         e.preventDefault();
-        var target = $($(this).attr('href'));
+        var target = $($(this).attr("href"));
         if (target.length) {
-            $('.smartfootnotes-preview').animate({
-                scrollTop: target.offset().top - $('.smartfootnotes-preview').offset().top + $('.smartfootnotes-preview').scrollTop()
+            $(".smartfootnotes-preview").animate({
+                scrollTop: target.offset().top - $(".smartfootnotes-preview").offset().top + $(".smartfootnotes-preview").scrollTop()
             }, 500);
         }
     });
@@ -365,4 +374,7 @@ jQuery(document).ready(function($) {
     // 初期表示時のプレビュー更新
     updatePreview();
 });
-</script>
+';
+
+wp_add_inline_script('smartfootnotes-admin', $admin_js);
+?>

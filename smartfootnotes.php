@@ -33,6 +33,7 @@ class Smart_Footnotes {
     private function __construct() {
         add_action('init', array($this, 'init'));
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
+        add_action('admin_enqueue_scripts', array($this, 'admin_enqueue_scripts'));
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_init', array($this, 'register_settings'));
         add_shortcode('sfnote', array($this, 'footnote_shortcode'));
@@ -76,6 +77,35 @@ class Smart_Footnotes {
         wp_localize_script('smartfootnotes', 'smartFootnotesSettings', array(
             'popupStyle' => get_option('smart_footnotes_popup_style', 'popup1')
         ));
+    }
+
+    public function admin_enqueue_scripts($hook) {
+        // SmartFootnotesの設定ページでのみスクリプトとスタイルを読み込む
+        if ($hook !== 'settings_page_smartfootnotes') {
+            return;
+        }
+
+        // プラグインのメインCSSを管理画面にも読み込む
+        wp_enqueue_style(
+            'smartfootnotes',
+            plugins_url('css/smartfootnotes.css', __FILE__),
+            array(),
+            '1.0.0'
+        );
+
+        // 管理画面用のカスタムCSSを登録（インラインCSSで使用）
+        wp_register_style('smartfootnotes-admin', false);
+        wp_enqueue_style('smartfootnotes-admin');
+
+        // 管理画面用のJavaScriptを登録（インラインJSで使用）
+        wp_register_script(
+            'smartfootnotes-admin',
+            false,
+            array('jquery'),
+            '1.0.0',
+            true
+        );
+        wp_enqueue_script('smartfootnotes-admin');
     }
 
     public function footnote_shortcode($atts, $content = null) {
